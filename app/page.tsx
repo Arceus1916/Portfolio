@@ -1,9 +1,6 @@
 import React from "react";
 import Masthead from "@/components/Masthead";
-import TechStockMarket from "@/components/TechStockMarket";
-import VictorianGitHubScreen from "@/components/VictorianGitHubScreen";
-import PatentOffice from "@/components/PatentOffice";
-import TelegraphPoll from "@/components/TelegraphPoll";
+import SideBySideArchivesAndExchange from "@/components/SideBySideArchivesAndExchange";
 import { CaseFileProps } from "@/components/GitHubRepoCard";
 import FloatingActionBar from "@/components/FloatingActionBar";
 import Footer from "@/components/Footer";
@@ -192,17 +189,8 @@ export default function Home() {
           </aside>
         </div>
 
-        {/* VICTORIAN GITHUB SCREEN: TOP 4 PROJECTS & PUNCH-CARD ACTIVITY LEDGER IN OUR COLOR PALETTE */}
-        <VictorianGitHubScreen projects={PINNED_CASE_FILES} />
-
-        {/* INTERACTIVE PATENT OFFICE: STAMP WAX SEALS ON VERIFIED CLAIMS */}
-        <PatentOffice />
-
-        {/* PUNE COMPUTATIONAL EXCHANGE: 2x2 SKILLS & INVENTORY GRID */}
-        <TechStockMarket />
-
-        {/* INTERACTIVE TELEGRAPH BALLOT FOR READER ENGAGEMENT */}
-        <TelegraphPoll />
+        {/* SIDE-BY-SIDE COMPUTATIONAL EXCHANGE & TOP FLAGSHIP GITHUB ARCHIVES WITH AUTO-FLIPPING CARDS */}
+        <SideBySideArchivesAndExchange projects={PINNED_CASE_FILES} />
       </main>
 
       <FloatingActionBar />
