@@ -171,35 +171,43 @@ export default function GitHubRepoCard({
   return (
     <article className="group relative flex flex-col justify-between bg-paper-cream border-2 border-paper-tan hover:border-ink-black rounded-sm p-5 transition-all duration-300 shadow-[2px_3px_0px_rgba(151,109,103,0.2)] hover:shadow-[4px_6px_0px_rgba(17,25,27,0.3)]">
       <div>
-        {/* Dossier Header Strip */}
-        <div className="flex items-center justify-between border-b border-paper-tan/60 pb-2 mb-3">
-          <span className="font-mono text-xs font-bold tracking-widest uppercase bg-paper-red text-paper-cream px-2 py-0.5 rounded-sm">
-            {caseNumber}
-          </span>
-          <div className="flex items-center gap-3 text-xs font-mono text-ink-black/80">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-paper-tan/60 pb-2 mb-3">
+          {/* Case Number Badge */}
+          <div className="flex items-center gap-2">
+            <span className="font-mono text-xs font-bold tracking-widest uppercase bg-paper-red text-paper-cream px-2 py-0.5 rounded-sm shrink-0">
+              {caseNumber}
+            </span>
+            <span className="inline-flex items-center gap-1 text-xs font-mono font-bold uppercase text-ink-black bg-paper-tan/30 px-2 py-0.5 rounded-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-paper-red inline-block" />
+              <span>{owner}/{repo}</span>
+            </span>
+          </div>
+
+          {/* Stars & Forks & Cache Status */}
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs font-mono uppercase text-ink-black/80 font-bold">
             {isCached && (
               <span
                 title="ETag Verified Local Archive"
                 className="inline-flex items-center gap-1 text-paper-tan text-[10px] uppercase font-semibold"
               >
-                <ShieldCheck className="w-3 h-3 text-paper-red" />
-                ETAG CACHED
+                <ShieldCheck className="w-3 h-3 text-paper-red shrink-0" />
+                <span>ETAG CACHED</span>
               </span>
             )}
             <span className="flex items-center gap-1">
-              <Star className="w-3.5 h-3.5 text-paper-red fill-paper-red" />
-              {isLoading ? "..." : metadata.stars}
+              <Star className="w-3.5 h-3.5 text-paper-red fill-paper-red shrink-0" />
+              <span>{isLoading ? "..." : metadata.stars}</span>
             </span>
             <span className="flex items-center gap-1">
-              <GitFork className="w-3.5 h-3.5 text-ink-black" />
-              {isLoading ? "..." : metadata.forks}
+              <GitFork className="w-3.5 h-3.5 text-ink-black shrink-0" />
+              <span>{isLoading ? "..." : metadata.forks}</span>
             </span>
           </div>
         </div>
 
         {/* Title */}
         <h3
-          className="text-xl sm:text-2xl font-bold text-ink-black font-headline tracking-tight group-hover:text-paper-red transition-colors"
+          className="text-lg sm:text-xl md:text-2xl font-bold text-ink-black font-headline tracking-tight group-hover:text-paper-red transition-colors text-balance"
           style={{ fontFamily: "var(--font-headline)" }}
         >
           {title}
@@ -225,7 +233,7 @@ export default function GitHubRepoCard({
         {errorNotice && (
           <div className="mt-2 flex items-center gap-1.5 text-[11px] text-paper-red font-mono italic">
             <AlertCircle className="w-3.5 h-3.5 shrink-0" />
-            {errorNotice}
+            <span>{errorNotice}</span>
           </div>
         )}
       </div>
@@ -250,13 +258,13 @@ export default function GitHubRepoCard({
         </div>
 
         {/* Action Buttons: Case Dossier & GitHub Telegraph */}
-        <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-paper-tan/40">
+        <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-between gap-2 pt-2 border-t border-paper-tan/40">
           <Link
             href={`/projects/${repo.toLowerCase()}`}
-            className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-paper-cream bg-ink-black hover:bg-paper-red px-3 py-1.5 rounded transition-colors shadow-sm"
+            className="inline-flex items-center justify-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-paper-cream bg-ink-black hover:bg-paper-red px-3 py-2 sm:py-1.5 rounded transition-colors shadow-sm text-center"
           >
             <span>Read Case Dossier</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-3.5 h-3.5 shrink-0" />
           </Link>
 
           <a
@@ -264,10 +272,10 @@ export default function GitHubRepoCard({
             target="_blank"
             rel="noopener noreferrer"
             title="Open in GitHub Telegraph"
-            className="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-ink-black bg-paper-cream hover:bg-paper-tan/20 border border-ink-black px-2.5 py-1.5 rounded transition-all duration-200"
+            className="inline-flex items-center justify-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider text-ink-black bg-paper-cream hover:bg-paper-tan/20 border border-ink-black px-2.5 py-2 sm:py-1.5 rounded transition-all duration-200 text-center"
           >
             <span>Telegraph</span>
-            <ExternalLink className="w-3.5 h-3.5" />
+            <ExternalLink className="w-3.5 h-3.5 shrink-0" />
           </a>
         </div>
       </div>

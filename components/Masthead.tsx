@@ -22,19 +22,19 @@ export default function Masthead({
   const navLinks = [
     {
       label: "The Paper Ledger",
-      subLabel: "(Resume PDF)",
+      subLabel: "(Resume)",
       href: QUICK_LINKS.resumePdf,
       icon: <Scroll className="w-4 h-4 mr-1.5 inline-block text-paper-red" />,
     },
     {
       label: "Telegraph Archives",
-      subLabel: "(Git Repository)",
+      subLabel: "(GitHub)",
       href: QUICK_LINKS.github,
       icon: <Radio className="w-4 h-4 mr-1.5 inline-block text-paper-red" />,
     },
     {
       label: "Author's Quill",
-      subLabel: "(Contact & Dispatch)",
+      subLabel: "(Email & Contact)",
       href: QUICK_LINKS.email,
       icon: <PenTool className="w-4 h-4 mr-1.5 inline-block text-paper-red" />,
     },
@@ -62,7 +62,7 @@ export default function Masthead({
         {/* MAIN HERO IDENTIFICATION: AMEY RASEKAR BRIGHT & BIG */}
         {showHeroName && (
           <div className="text-center py-6 border-b-2 border-paper-tan/60 relative flex flex-col items-center justify-center">
-            <div className="inline-flex items-center px-3.5 py-1 bg-ink-black text-paper-cream text-xs font-mono font-bold uppercase tracking-widest rounded-sm mb-3">
+            <div className="inline-flex items-center px-3.5 py-1 bg-ink-black text-paper-cream text-[10px] sm:text-xs font-mono font-bold uppercase tracking-widest rounded-sm mb-3 text-center max-w-full leading-snug">
               CHIEF COMPUTATIONAL ARCHITECT • PUNE BUREAU
             </div>
 
@@ -82,17 +82,17 @@ export default function Masthead({
               </Link>
 
               {/* AMEY RASEKAR NAME HIGHLIGHTED */}
-              <div className="flex-1 text-center">
+              <div className="flex-1 text-center px-1">
                 <h1
-                  className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-ink-black font-headline uppercase leading-none text-balance"
+                  className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-ink-black font-headline uppercase leading-tight sm:leading-none text-balance"
                   style={{ fontFamily: "var(--font-headline)" }}
                 >
                   <span className="text-paper-red">Amey</span> Rasekar
                 </h1>
-                <p className="mt-3 text-lg sm:text-2xl font-bold uppercase tracking-wider text-ink-black font-serif">
+                <p className="mt-3 text-base sm:text-xl md:text-2xl font-bold uppercase tracking-wider text-ink-black font-serif text-balance leading-snug">
                   Full-Stack Engineering &amp; Artificial Intelligence Architect
                 </p>
-                <p className="mt-1 text-xs sm:text-sm font-mono uppercase tracking-widest text-ink-black/75">
+                <p className="mt-2 text-[10px] sm:text-xs md:text-sm font-mono uppercase tracking-widest text-ink-black/75 text-balance leading-relaxed">
                   PUNE, INDIA • DEEP LEARNING • SCALABLE BACKEND SYSTEMS • TYPE-SAFE WEB
                 </p>
               </div>
@@ -115,7 +115,7 @@ export default function Masthead({
         )}
 
         {/* Date Line & Location Strip (Easter Egg Link on Date) */}
-        <div className="border-b-2 border-ink-black py-2 my-2 flex flex-wrap items-center justify-between text-xs sm:text-sm font-serif uppercase tracking-wider text-ink-black">
+        <div className="border-b-2 border-ink-black py-2 my-2 flex flex-col sm:flex-row flex-wrap items-center justify-center sm:justify-between gap-1 sm:gap-2 text-center text-xs sm:text-sm font-serif uppercase tracking-wider text-ink-black">
           <span className="font-bold">LOCATION: PUNE ENGINEERING BUREAU, INDIA</span>
           <Link
             href="/folds/secret-edition"
@@ -130,7 +130,7 @@ export default function Masthead({
         {/* Top Navigation Bar: The Paper Ledger, Telegraph Archives, Author's Quill */}
         <nav
           aria-label="Main Victorian Navigation"
-          className="pt-2 pb-1 flex flex-wrap items-center justify-center gap-4 sm:gap-8 md:gap-12"
+          className="pt-2 pb-1 flex flex-wrap items-center justify-center gap-2 sm:gap-6 md:gap-8"
         >
           {navLinks.map((link) => (
             <a
@@ -138,16 +138,16 @@ export default function Masthead({
               href={link.href}
               target={link.href === "/resume" || link.href.endsWith(".pdf") || link.href.startsWith("http") ? "_blank" : undefined}
               rel={link.href === "/resume" || link.href.endsWith(".pdf") || link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group flex items-center text-sm sm:text-base font-bold uppercase tracking-wider text-ink-black hover:text-paper-red transition-colors py-1 px-3 border border-transparent hover:border-paper-tan rounded-sm"
+              className="group flex flex-wrap items-center justify-center text-xs sm:text-sm md:text-base font-bold uppercase tracking-wider text-ink-black hover:text-paper-red transition-colors py-1.5 px-2 sm:px-3 border border-transparent hover:border-paper-tan rounded-sm text-center"
             >
               {link.icon}
               <span className="border-b border-ink-black group-hover:border-paper-red">
                 {link.label}
               </span>
-              <span className="ml-1.5 text-xs font-mono font-normal text-ink-black/70 group-hover:text-paper-red">
+              <span className="ml-1 text-[10px] sm:text-xs font-mono font-normal text-ink-black/70 group-hover:text-paper-red">
                 {link.subLabel}
               </span>
-              <ExternalLink className="w-3.5 h-3.5 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:inline-block" />
             </a>
           ))}
         </nav>

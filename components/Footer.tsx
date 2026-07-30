@@ -1,15 +1,35 @@
 import React from "react";
 import { QUICK_LINKS } from "@/config/links";
-import { Compass } from "lucide-react";
+import { Compass, Scroll, Mail, Phone } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 
 export default function Footer() {
   const footerLinks = [
-    { label: "The Paper Ledger (Resume)", href: QUICK_LINKS.resumePdf },
-    { label: "Git Repository (GitHub)", href: QUICK_LINKS.github },
-    { label: "LinkedIn Telegraph", href: QUICK_LINKS.linkedin },
-    { label: "Instagram Dispatch", href: QUICK_LINKS.instagram },
-    { label: "Author's Quill (Email)", href: QUICK_LINKS.email },
-    { label: "Telephone Wire", href: QUICK_LINKS.phone },
+    {
+      label: "The Paper Ledger (Resume)",
+      href: QUICK_LINKS.resumePdf,
+      icon: <Scroll className="w-4 h-4 text-paper-red shrink-0" />,
+    },
+    {
+      label: "Git Repository (GitHub)",
+      href: QUICK_LINKS.github,
+      icon: <GithubIcon className="w-4 h-4 text-ink-black shrink-0" />,
+    },
+    {
+      label: "LinkedIn Telegraph (LinkedIn)",
+      href: QUICK_LINKS.linkedin,
+      icon: <LinkedinIcon className="w-4 h-4 text-ink-black shrink-0" />,
+    },
+    {
+      label: "Author's Quill (Email)",
+      href: QUICK_LINKS.email,
+      icon: <Mail className="w-4 h-4 text-paper-red shrink-0" />,
+    },
+    {
+      label: "Telephone Wire (Phone)",
+      href: QUICK_LINKS.phone,
+      icon: <Phone className="w-4 h-4 text-ink-black shrink-0" />,
+    },
   ];
 
   return (
@@ -35,7 +55,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Links Grid */}
+        {/* Links Grid with Icons */}
         <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 border-y border-paper-tan py-6 my-6 font-serif">
           {footerLinks.map((link) => (
             <a
@@ -43,18 +63,16 @@ export default function Footer() {
               href={link.href}
               target={link.href.startsWith("http") ? "_blank" : undefined}
               rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="text-sm font-bold uppercase tracking-wider text-ink-black hover:text-paper-red transition-colors border-b border-transparent hover:border-paper-red"
+              className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-wider text-ink-black hover:text-paper-red transition-colors border-b border-transparent hover:border-paper-red"
             >
-              {link.label}
+              {link.icon}
+              <span>{link.label}</span>
             </a>
           ))}
         </div>
 
-        {/* Copyright & Lore Notes */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-serif text-ink-black/80">
-          <div>
-            &copy; 2005 Royal Society of Computational Engineers. All Rights Reserved.
-          </div>
+        {/* Lore Notes (Copyright Removed) */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-serif text-ink-black/80 text-center sm:text-left">
           <div className="font-mono text-paper-red font-bold">
             Powered by Ether &amp; Advanced Mechanical Logic
           </div>

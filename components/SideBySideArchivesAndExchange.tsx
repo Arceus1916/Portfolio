@@ -416,7 +416,7 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
               >
                 <div>
                   {/* Top Flagship Index Banner inside Card */}
-                  <div className="bg-ink-black text-paper-cream px-3 py-1.5 text-[11px] font-mono font-bold uppercase tracking-widest flex items-center justify-between rounded-t-sm mb-4">
+                  <div className="bg-ink-black text-paper-cream px-3 py-1.5 text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-widest flex flex-wrap items-center justify-between gap-1 rounded-t-sm mb-4">
                     <span>FLAGSHIP ARCHIVE #0{archiveIndex + 1} OF 0{totalArchives}</span>
                     <span className="text-paper-red">★ VERIFIED CODEBASE ★</span>
                   </div>
@@ -428,7 +428,7 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
                 </div>
 
                 {/* Card Footer Metric */}
-                <div className="mt-6 pt-3 border-t border-paper-tan/60 flex items-center justify-between text-xs font-mono uppercase text-ink-black/70">
+                <div className="mt-6 pt-3 border-t border-paper-tan/60 flex flex-wrap items-center justify-between gap-1 text-[10px] sm:text-xs font-mono uppercase text-ink-black/70">
                   <span>● APACHE-2.0 / MIT OPEN ARCHIVE</span>
                   <span className="font-bold text-paper-red">DOSSIER 0{archiveIndex + 1} / 04</span>
                 </div>
@@ -439,13 +439,13 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
       </div>
 
       {/* ==================== 16-WEEK MECHANICAL CONTRIBUTION LEDGER ==================== */}
-      <div className="border-2 border-paper-tan bg-ink-black text-paper-cream p-4 sm:p-6 rounded-sm mt-8 shadow-inner overflow-x-auto">
-        <div className="flex items-center justify-between border-b border-paper-tan/40 pb-3 mb-4">
+      <div className="border-2 border-paper-tan bg-ink-black text-paper-cream p-4 sm:p-6 rounded-sm mt-8 shadow-inner overflow-x-auto max-w-full">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-paper-tan/40 pb-3 mb-4">
           <span className="text-xs font-mono font-bold uppercase tracking-widest text-paper-cream flex items-center gap-2">
-            <Activity className="w-4 h-4 text-paper-red" />
-            16-WEEK MECHANICAL CONTRIBUTION LEDGER (GITHUB PUNCH-CARD ACTIVITY ARCHIVE)
+            <Activity className="w-4 h-4 text-paper-red shrink-0" />
+            <span>16-WEEK MECHANICAL CONTRIBUTION LEDGER (GITHUB PUNCH-CARD ACTIVITY ARCHIVE)</span>
           </span>
-          <div className="flex items-center gap-2 text-[10px] font-mono text-paper-tan">
+          <div className="flex items-center gap-2 text-[10px] font-mono text-paper-tan shrink-0">
             <span>LESS</span>
             <span className="w-2.5 h-2.5 inline-block bg-paper-cream/80 border border-paper-tan/40" />
             <span className="w-2.5 h-2.5 inline-block bg-paper-tan/40 border border-paper-tan" />
@@ -456,7 +456,7 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
         </div>
 
         {/* The Contribution Squares Grid */}
-        <div className="flex gap-1.5 min-w-[500px] py-2">
+        <div className="flex gap-1.5 min-w-[420px] py-2">
           {punchCardData.map((week, weekIdx) => (
             <div key={weekIdx} className="flex flex-col gap-1.5 flex-1">
               {week.map((intensity, dayIdx) => (
@@ -473,7 +473,7 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
             </div>
           ))}
         </div>
-        <div className="mt-3 text-[10px] font-mono uppercase text-paper-cream/60 flex justify-between">
+        <div className="mt-3 text-[10px] font-mono uppercase text-paper-cream/60 flex flex-col sm:flex-row justify-between gap-1 text-center sm:text-left">
           <span>● CONTINUOUS MECHANICAL RECORDING • SYNCED TO ARCEUS1916</span>
           <a
             href="https://github.com/Arceus1916?tab=repositories"

@@ -52,7 +52,7 @@ export default function ContactPage() {
     {
       title: "LinkedIn Professional Wire",
       label: "LinkedIn",
-      value: "Professional Network",
+      value: "amey-rasekar",
       href: QUICK_LINKS.linkedin,
       icon: <LinkedinIcon className="w-5 h-5 text-ink-black" />,
       badge: "EXCHANGE WIRE",
@@ -60,7 +60,7 @@ export default function ContactPage() {
     {
       title: "Instagram Visual Dispatch",
       label: "Instagram",
-      value: "Social Chronicle",
+      value: "@arceus1619",
       href: QUICK_LINKS.instagram,
       icon: <InstagramIcon className="w-5 h-5 text-paper-red" />,
       badge: "SOCIAL BULLETIN",
@@ -146,7 +146,7 @@ export default function ContactPage() {
               className="text-2xl font-bold uppercase tracking-tight text-ink-black font-headline"
               style={{ fontFamily: "var(--font-headline)" }}
             >
-              Author&apos;s Quill — Transmit Dispatch
+              Author&apos;s Quill (Email &amp; Contact) — Transmit Dispatch
             </h2>
             <p className="text-xs font-mono uppercase text-ink-black/70 mt-1">
               COMPOSE YOUR MESSAGE BELOW TO TRANSMIT VIA TELEGRAPH INTERFACE

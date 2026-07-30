@@ -60,38 +60,38 @@ export default function Home() {
       <Masthead showHeroName={true} />
 
       {/* Main Full-Page Newspaper Broadsheet Frame */}
-      <main className="flex-1 max-w-[1400px] w-full mx-auto px-4 sm:px-8 lg:px-12 py-8 border-x-2 border-b-2 border-ink-black/80">
+      <main className="flex-1 max-w-[1400px] w-full mx-auto px-3 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 border-x-0 sm:border-x-2 border-b-2 border-ink-black/80 overflow-hidden">
         {/* TOP BROADSHEET GRID: LEAD STORY AND EXECUTIVE SUMMARY IN VICTORIAN COLUMNS */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-10 border-b-4 border-double border-ink-black pb-10">
           {/* Left Column (8 cols on desktop): Lead Story & Editorial Investigation */}
           <section aria-label="Lead Story" className="lg:col-span-8 lg:border-r-2 lg:border-ink-black lg:pr-8">
-            <div className="border-b-2 border-ink-black pb-1 mb-4 flex items-center justify-between text-xs font-mono uppercase tracking-widest text-ink-black/80">
-              <span className="flex items-center gap-1.5 font-bold text-paper-red">
-                <Newspaper className="w-4 h-4" />
-                FRONT-PAGE LEAD INVESTIGATION
+            <div className="border-b-2 border-ink-black pb-1 mb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-[10px] sm:text-xs font-mono uppercase tracking-widest text-ink-black/80 text-center sm:text-left">
+              <span className="flex items-center justify-center sm:justify-start gap-1.5 font-bold text-paper-red">
+                <Newspaper className="w-4 h-4 shrink-0" />
+                <span>FRONT-PAGE LEAD INVESTIGATION</span>
               </span>
               <span>ENGINEERING BUREAU DISPATCH • PUNE, INDIA</span>
             </div>
 
             <h2
-              className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-ink-black font-headline uppercase leading-none mb-4"
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink-black font-headline uppercase leading-tight sm:leading-none mb-4 text-balance"
               style={{ fontFamily: "var(--font-headline)" }}
             >
               Architecting Resilient Full-Stack Systems &amp; Neural Computation Models
             </h2>
 
-            <div className="border-y border-paper-tan py-2.5 my-4 flex flex-wrap items-center justify-between text-xs sm:text-sm font-serif italic text-ink-black/90">
+            <div className="border-y border-paper-tan py-2.5 my-4 flex flex-col sm:flex-row flex-wrap items-start sm:items-center justify-between gap-1 text-xs sm:text-sm font-serif italic text-ink-black/90">
               <div>
                 By <span className="font-bold not-italic uppercase">Amey Rasekar</span> — Chief
                 Computational Architect, Pune Bureau
               </div>
-              <div className="font-mono not-italic text-xs text-paper-red font-bold">
+              <div className="font-mono not-italic text-[11px] sm:text-xs text-paper-red font-bold">
                 [VERIFIED ENGINEER ARCHIVE: ACTIVE DEPLOYMENT]
               </div>
             </div>
 
             {/* Multi-column newspaper justified body text with Drop Cap */}
-            <div className="newspaper-columns text-base sm:text-lg text-ink-black leading-relaxed font-serif text-justify pt-2">
+            <div className="newspaper-columns text-sm sm:text-base md:text-lg text-ink-black leading-relaxed font-serif text-justify pt-2">
               <p className="drop-cap mb-4">
                 Operating from the Pune Engineering Bureau, I have dedicated my career to synthesizing
                 artificial intelligence, machine learning, and scalable full-stack computing. My work
@@ -121,10 +121,10 @@ export default function Home() {
             aria-label="Executive Architectural Summary"
             className="lg:col-span-4 flex flex-col justify-between space-y-6"
           >
-            <div className="border-4 border-double border-ink-black bg-paper-tan/15 p-5 rounded-sm">
+            <div className="border-4 border-double border-ink-black bg-paper-tan/15 p-4 sm:p-5 rounded-sm">
               <div className="border-b-2 border-ink-black pb-2 mb-3 flex items-center justify-between">
                 <h3
-                  className="text-lg font-bold uppercase tracking-wide text-ink-black font-headline flex items-center gap-1.5"
+                  className="text-base sm:text-lg font-bold uppercase tracking-wide text-ink-black font-headline flex items-center gap-1.5"
                   style={{ fontFamily: "var(--font-headline)" }}
                 >
                   <Award className="w-5 h-5 text-paper-red shrink-0" />
@@ -163,26 +163,28 @@ export default function Home() {
             </div>
 
             {/* Telegraph Quick Dispatch Box */}
-            <div className="border-2 border-ink-black bg-ink-black text-paper-cream p-5 rounded-sm">
+            <div className="border-2 border-ink-black bg-ink-black text-paper-cream p-4 sm:p-5 rounded-sm">
               <div className="text-xs font-mono font-bold uppercase tracking-widest text-paper-tan mb-2 flex items-center gap-2">
-                <Terminal className="w-4 h-4 text-paper-red animate-pulse" />
-                TELEGRAPH QUICK-DISPATCH
+                <Terminal className="w-4 h-4 text-paper-red animate-pulse shrink-0" />
+                <span>TELEGRAPH QUICK-DISPATCH</span>
               </div>
               <p className="text-xs font-serif italic text-paper-cream/90 mb-4">
                 Immediate access to full credentials, source code ledgers, and direct Pune bureau wire.
               </p>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <a
                   href="/contact"
                   className="text-center py-2 px-3 bg-paper-red hover:bg-paper-cream hover:text-ink-black text-paper-cream font-mono font-bold text-xs uppercase rounded transition-colors"
                 >
-                  Author&apos;s Quill
+                  <div>Author&apos;s Quill</div>
+                  <div className="text-[10px] font-normal opacity-90">(Email)</div>
                 </a>
                 <a
                   href="/ledger"
                   className="text-center py-2 px-3 bg-paper-tan/30 hover:bg-paper-cream hover:text-ink-black text-paper-cream font-mono font-bold text-xs uppercase rounded transition-colors"
                 >
-                  Paper Ledger
+                  <div>Paper Ledger</div>
+                  <div className="text-[10px] font-normal opacity-90">(Resume)</div>
                 </a>
               </div>
             </div>

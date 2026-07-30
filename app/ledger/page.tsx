@@ -10,7 +10,7 @@ import { ArrowLeft, ExternalLink, Download, Scroll, ShieldCheck } from "lucide-r
 export default function LedgerPage() {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-paper-cream">
-      <Masthead title="The Paper Ledger" date="OFFICIAL RESUME & CREDENTIAL ARCHIVE" />
+      <Masthead title="The Paper Ledger (Resume)" date="OFFICIAL RESUME & CREDENTIAL ARCHIVE" />
 
       <main className="flex-1 max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="border-b-2 border-ink-black pb-3 mb-6 flex flex-wrap items-center justify-between gap-4 text-xs font-mono uppercase tracking-widest text-ink-black">
