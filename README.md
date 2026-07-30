@@ -1,117 +1,75 @@
-# The Programmer's Gazette — Official Architectural Portfolio of Amey Rasekar
+# Amey Rasekar — Developer Portfolio
 
 <div align="center">
 
-**[ EST. MMV (2005) • ROYAL SOCIETY OF COMPUTATIONAL ENGINEERS • PUNE ENGINEERING BUREAU ]**
+**Full-Stack Software Engineer & AI Developer • Pune, India**
 
-*A 19th-Century Broadsheet Interactive Developer Portfolio & Systems Engineering Ledger*
-
-[![GitHub Archive](https://img.shields.io/badge/GitHub%20Wire-Arceus1916-11191B?style=for-the-badge&logo=github&logoColor=F0F4E3)](https://github.com/Arceus1916)
-[![Engineering Division](https://img.shields.io/badge/Bureau-Pune%2C%20India-A72A24?style=for-the-badge)](https://github.com/Arceus1916)
-[![WCAG Standard](https://img.shields.io/badge/WCAG%202.1-AA%2FAAA%20Compliant-11191B?style=for-the-badge)](https://www.w3.org/WAI/standards-guidelines/wcag/)
+[![GitHub](https://img.shields.io/badge/GitHub-Arceus1916-11191B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Arceus1916)
+[![Email](https://img.shields.io/badge/Email-rasekaramey%40gmail.com-A72A24?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rasekaramey@gmail.com)
+[![Location](https://img.shields.io/badge/Location-Pune%2C%20India-4A5568?style=for-the-badge)](https://github.com/Arceus1916)
 
 </div>
 
 ---
 
-## Executive Summary & Publication Vision
+## About This Portfolio
 
-**The Programmer's Gazette** is an interactive, Victorian newspaper–themed developer portfolio architected by **Amey Rasekar** (`@Arceus1916`). Operating from the **Pune Engineering Bureau**, I designed this publication as an immersive, high-performance web broadsheet that bridges 19th-century mechanical aesthetics with state-of-the-art software engineering.
+Welcome to my interactive developer portfolio. Instead of a standard resume website, I built this site around a vintage newspaper theme (**"The Programmer's Gazette"**) to make browsing my work fun and engaging. 
 
-Rather than a conventional resume website, *The Programmer's Gazette* presents my body of work as an authentic historical publication founded in **2005 (MMV)**. Every project is documented as a verified "Case Dossier," computational skills are traded on the **Pune Computational Exchange**, and continuous GitHub commits are recorded on a **16-Week Mechanical Punch-Card Ledger**.
-
----
-
-## Chief Computational Architect & Full-Stack Engineer
-
-* **Author & Chief Computational Architect:** Amey Rasekar
-* **Bureau Headquarters:** Pune Division, India
-* **Core Technical Domains:**
-  * **Deep Learning & Computer Vision:** Convolutional Neural Networks (CNN), PyTorch, Diagnostic Classification, Multiclass MRI Analysis.
-  * **Full-Stack Distributed Systems:** Next.js 15 App Router, React 19, TypeScript (Strict), Node.js, Spring Boot Microservices.
-  * **High-Throughput Telemetry & Spatial Data:** Enterprise PostgreSQL, Spatial Indexing, Automated Data Ingestion Pipelines.
-  * **Mobile & Offline-First Ecosystems:** React Native, Expo CLI, Realm Local-First Persistence, Field GPS Tagging.
-  * **Decentralized Ledgers:** Peer-to-Peer Smart Contract Protocols, Energy Trading Architectures.
+Under the hood, it is a fast, modern web application built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS**, featuring:
+- **Interactive Side-by-Side Cards:** Browse my technical skills and GitHub projects with smooth, flipping card animations.
+- **Contribution Graph:** A visual punch-card ledger showing my GitHub activity.
+- **Live GitHub Sync:** Connects to GitHub's API with ETag caching to show up-to-date star and fork counts without hitting rate limits.
+- **Built-in Resume Viewer:** Open and view my full resume directly on the site.
 
 ---
 
-## Top Flagship GitHub Archives
+## Featured Projects
 
-The portfolio spotlights four primary engineering investigations, presented with interactive case files and ETag-verified live GitHub metadata synchronization:
+Here are four of my primary projects featured in this portfolio:
 
-### 1. Ocean Intelligence (`Case #101`)
-* **Focus:** Full-Stack Marine Data Ingestion & Real-Time Oceanographic Analytics.
-* **Synopsis:** An automated data ingestion platform engineered to harmonize fragmented biological marine metrics. Couples high-throughput telemetry ingestion with an enterprise PostgreSQL relational ledger to transform chaotic raw oceanographic data into structured, queryable intelligence.
-* **Core Instruments:** React • Node.js / Spring Boot • PostgreSQL • Python.
+### 1. Ocean Intelligence
+* **What it is:** A marine data research platform that collects, cleans, and visualizes oceanographic data.
+* **Why I built it:** Marine research data is often scattered across different formats. I built a centralized pipeline and database to make ocean telemetry easy to search, analyze, and visualize.
+* **Tech Stack:** React, Node.js, Spring Boot, PostgreSQL, Python.
 
-### 2. Mental Illness Detection (`Case #102`)
-* **Focus:** Deep Learning Medical Diagnostics (Alzheimer's Stage Classification).
-* **Synopsis:** A deep Convolutional Neural Network (CNN) trained on MRI cross-sections to detect and classify early-stage cognitive degeneration with **90%+ empirical diagnostic precision**. Integrated with an interactive conversational triage agent for clinical evaluation.
-* **Core Instruments:** Python • PyTorch • Scikit-Learn • CNN Architecture • Web API.
+### 2. Mental Illness Detection (Alzheimer's MRI Classifier)
+* **What it is:** A deep learning imaging model that detects early-stage Alzheimer's disease from MRI brain scans.
+* **Why I built it:** To help automate early clinical screening. The model uses Convolutional Neural Networks (CNNs) to classify MRI cross-sections with over **90% accuracy**, paired with a chat interface for quick initial triage.
+* **Tech Stack:** Python, PyTorch, Scikit-Learn, CNNs, Web API.
 
-### 3. EnvDex (`Case #103`)
-* **Focus:** Mobile Field Ecosystem & Offline-First Biological Archive.
-* **Synopsis:** A Pokédex-style mobile instrument designed for field naturalists and botanists. Utilizes local Realm DB persistence to capture, categorize, and GPS-tag local flora and fauna without reliance on continuous network connectivity.
-* **Core Instruments:** React Native • Expo CLI • Realm DB • TypeScript.
+### 3. EnvDex
+* **What it is:** An offline-first mobile app for field researchers and nature enthusiasts to catalog plants and animals.
+* **Why I built it:** Exploring nature often happens far from cellular towers. EnvDex works completely offline, letting users photograph species, save GPS coordinates, and sync with the cloud once they return online.
+* **Tech Stack:** React Native, Expo CLI, Realm Local DB, TypeScript.
 
-### 4. URRJA (`Case #104`)
-* **Focus:** Decentralized Peer-to-Peer Energy Trading Ledger.
-* **Synopsis:** A smart-contract prototype allowing residential nodes with surplus solar mechanization to directly trade excess wattage with neighboring peers across a verifiable, zero-intermediary distributed wire.
-* **Core Instruments:** TypeScript • Smart Contract Logic • Distributed P2P Consensus.
-
----
-
-## Interactive Features & Architectural Principles
-
-### 1. Twin-Column Archival Exhibit (Side-by-Side Auto-Flipping Cards)
-The publication features a synchronized newspaper broadsheet layout that displays the **Pune Computational Exchange** (4 technical skill sectors) side-by-side with the **Top Flagship GitHub Archives** (4 pinned repositories).
-* **Mechanical Card Turning:** Powered by 3D `rotateX` card turning animations.
-* **Interactive Control Bar:** Includes explicit `[ ⏸ PAUSE FLIP ]` / `[ ▶ RESUME ]` controls and manual `[ ◄ PREV ]` / `[ NEXT ► ]` navigation buttons.
-* **Staggered Auto-Flipping:** Both columns automatically cycle through their respective dossiers by default, keeping the newspaper alive with continuous activity.
-
-### 2. 16-Week Mechanical Contribution Ledger
-An authentic 19th-century punch-card grid that visualizes continuous computational activity in our signature Paper Red (`#A72A24`) and Tan ink palette, providing a tangible record of engineering persistence.
-
-### 3. ETag-Verified Telegraph Synchronization
-Project dossiers integrate directly with the GitHub REST API using `If-None-Match` HTTP ETag headers and localStorage caching. This ensures **zero unnecessary rate-limit consumption** (`304 Not Modified`) while maintaining real-time star and fork counts.
-
-### 4. The Secret Folds & Cryptogram Oracle (`/folds/secret-edition`)
-An interactive Victorian cipher puzzle hidden within the publication. Readers who decode the intercepted `+3 Caesar Cipher` telegraph message unlock an honorary supplement from the Royal Society of Computational Engineers.
-
-### 5. The Paper Ledger (`/resume`) & Author's Quill (`/contact`)
-* **The Paper Ledger:** A custom-embedded PDF resume viewer (`app/resume/page.tsx`) with dedicated "AR" monogram favicon and architectural metadata.
-* **Author's Quill:** A direct dispatch interface for professional inquiries and engineering correspondence.
+### 4. URRJA
+* **What it is:** A prototype platform for peer-to-peer solar energy trading.
+* **Why I built it:** Many homes generate more solar power than they use. URRJA allows neighbors to trade their surplus solar energy directly with one another through smart contracts.
+* **Tech Stack:** TypeScript, Distributed Ledger Logic, Smart Contracts.
 
 ---
 
-## Design System & Typography Tokens
+## Technical Skills
 
-The publication adheres to strict color and typographic rules defined in Tailwind CSS v4 tokens:
-
-| Token Name | Hex Code | Purpose & Semantic Role |
-| :--- | :--- | :--- |
-| **`paper-cream`** | `#F0F4E3` | Authentic 19th-century aged broadsheet background paper |
-| **`ink-black`** | `#11191B` | High-contrast dark ink for headlines, body text, and structural frames |
-| **`paper-red`** | `#A72A24` | Crimson emphasis ink for lead headlines, badges, and verified seals |
-| **`paper-tan`** | `#976D67` | Antique sepia accents, engraved borders, and secondary column dividers |
-
-### Typographic Faces
-* **Headlines (`var(--font-headline)`):** *Libre Bodoni* / *Bodoni Moda* — period-accurate serif display typography.
-* **Body Columns (`var(--font-serif)`):** *EB Garamond* / *Crimson Text* — readable old-style print serif with drop caps.
-* **Code & Telegraphs (`var(--font-mono)`):** *IBM Plex Mono* — mechanical typewriter monospaced numerals and console output.
+* **Frontend & Mobile:** Next.js 15, React 19, React Native, TypeScript, Tailwind CSS, HTML5/CSS3.
+* **Backend & Databases:** Node.js, Express, Spring Boot, PostgreSQL, SQL, Realm DB, REST APIs.
+* **AI & Machine Learning:** Python, PyTorch, Convolutional Neural Networks (CNN), Scikit-Learn, Data Processing.
+* **Tools & Workflow:** Git, GitHub, Docker, CI/CD, Agile Development.
 
 ---
 
-## Accessibility & Performance Standards
+## Get in Touch
 
-* **WCAG 2.1 Compliance:** Engineered for maximum readability with contrast ratios exceeding 4.5:1 (`#11191B` ink on `#F0F4E3` cream paper), semantic `<header>`, `<main>`, `<article>`, `<nav>`, and `<footer>` HTML landmarks.
-* **Zero Layout Shift:** Font display swapping and statically generated Next.js App Router routes ensure instant page hydration and sub-second Largest Contentful Paint (LCP).
+I am always open to discussing new software engineering opportunities, AI research collaborations, or full-stack projects.
+
+- **GitHub:** [github.com/Arceus1916](https://github.com/Arceus1916)
+- **Email:** [rasekaramey@gmail.com](mailto:rasekaramey@gmail.com)
+- **Phone:** +91 94033-20981
+- **Location:** Pune, Maharashtra, India
 
 ---
 
 <div align="center">
-
-**© MMV (2005) ROYAL SOCIETY OF COMPUTATIONAL ENGINEERS • PUNE BUREAU DIVISION**  
-*All Claims & Code Specimens Verified Under MIT and Apache-2.0 Open Licenses*
-
+  <p>© 2005–Present • Built by Amey Rasekar</p>
 </div>
