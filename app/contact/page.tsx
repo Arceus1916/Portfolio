@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import Masthead from "@/components/Masthead";
 import FloatingActionBar from "@/components/FloatingActionBar";
 import Footer from "@/components/Footer";
 import { QUICK_LINKS } from "@/config/links";
-import { Mail, Phone, Send, Radio, MapPin } from "lucide-react";
+import { Mail, Phone, Send, Radio, MapPin, ArrowLeft } from "lucide-react";
 import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/Icons";
 
 export default function ContactPage() {
@@ -60,7 +61,7 @@ export default function ContactPage() {
     {
       title: "Instagram Visual Dispatch",
       label: "Instagram",
-      value: "@arceus1619",
+      value: "@arceus1916",
       href: QUICK_LINKS.instagram,
       icon: <InstagramIcon className="w-5 h-5 text-paper-red" />,
       badge: "SOCIAL BULLETIN",
@@ -72,12 +73,21 @@ export default function ContactPage() {
       <Masthead title="The Telegraph Office" date="PUNE BUREAU DISPATCH CENTER" />
 
       <main className="flex-1 max-w-[1100px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header Strip */}
-        <div className="border-b-2 border-ink-black pb-2 mb-6 flex items-center justify-between text-xs font-mono uppercase tracking-widest text-ink-black/80">
+        {/* Header Strip with Return Button */}
+        <div className="border-b-2 border-ink-black pb-3 mb-6 flex flex-wrap items-center justify-between gap-4 text-xs font-mono uppercase tracking-widest text-ink-black/80">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 bg-paper-tan/20 hover:bg-ink-black hover:text-paper-cream px-3 py-1.5 border border-paper-tan rounded transition-colors font-bold text-ink-black"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>Return to Front-Page Edition</span>
+          </Link>
+
           <span className="flex items-center gap-1.5 font-bold text-paper-red">
             <Radio className="w-4 h-4 animate-pulse" />
             THE TELEGRAPH OFFICE — DISPATCH &amp; INQUIRY BUREAU
           </span>
+
           <span className="flex items-center gap-1">
             <MapPin className="w-3.5 h-3.5" />
             PUNE ENGINEERING BUREAU, INDIA

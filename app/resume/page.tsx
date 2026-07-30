@@ -54,10 +54,14 @@ export default function ResumeViewerPage() {
       </header>
 
       {/* Full-Screen PDF Viewer */}
-      <div className="flex-1 w-full h-[calc(100vh-60px)] bg-neutral-900">
+      <div
+        className="w-full bg-neutral-900 flex-1 flex flex-col"
+        style={{ height: "calc(100vh - 58px)", minHeight: "850px" }}
+      >
         <iframe
           src="/resume.pdf#view=FitH"
-          className="w-full h-full border-0 bg-white"
+          className="w-full border-0 bg-white block flex-1"
+          style={{ width: "100%", height: "calc(100vh - 58px)", minHeight: "850px" }}
           title="Amey Rasekar - Official Architectural Resume"
         />
       </div>
