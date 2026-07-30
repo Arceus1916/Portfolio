@@ -46,7 +46,7 @@ const specialElite = Special_Elite({
 export const metadata: Metadata = {
   title: "The Programmer's Gazette — Amey Rasekar | Victorian Developer Portfolio",
   description:
-    "An interactive Victorian-era newspaper portfolio for Amey Rasekar, Special Correspondent & Full-Stack Systems Engineer from Pune, India.",
+    "An interactive Victorian-era newspaper portfolio for Amey Rasekar, Chief Computational Architect & Full-Stack Systems Engineer from Pune, India.",
   keywords: [
     "Amey Rasekar",
     "The Programmer's Gazette",

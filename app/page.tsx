@@ -70,7 +70,7 @@ export default function Home() {
                 <Newspaper className="w-4 h-4" />
                 FRONT-PAGE LEAD INVESTIGATION
               </span>
-              <span>SPECIAL CORRESPONDENT DISPATCH • PUNE, INDIA</span>
+              <span>ENGINEERING BUREAU DISPATCH • PUNE, INDIA</span>
             </div>
 
             <h2
@@ -82,8 +82,8 @@ export default function Home() {
 
             <div className="border-y border-paper-tan py-2.5 my-4 flex flex-wrap items-center justify-between text-xs sm:text-sm font-serif italic text-ink-black/90">
               <div>
-                By <span className="font-bold not-italic uppercase">Amey Rasekar</span> — Lead
-                Systems Architect &amp; Special Correspondent, Pune Bureau
+                By <span className="font-bold not-italic uppercase">Amey Rasekar</span> — Chief
+                Computational Architect, Pune Bureau
               </div>
               <div className="font-mono not-italic text-xs text-paper-red font-bold">
                 [VERIFIED ENGINEER ARCHIVE: ACTIVE DEPLOYMENT]

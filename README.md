@@ -22,9 +22,9 @@ Rather than a conventional resume website, *The Programmer's Gazette* presents m
 
 ---
 
-## Lead Architect & Special Correspondent
+## Chief Computational Architect & Full-Stack Engineer
 
-* **Author & Lead Systems Engineer:** Amey Rasekar
+* **Author & Chief Computational Architect:** Amey Rasekar
 * **Bureau Headquarters:** Pune Division, India
 * **Core Technical Domains:**
   * **Deep Learning & Computer Vision:** Convolutional Neural Networks (CNN), PyTorch, Diagnostic Classification, Multiclass MRI Analysis.

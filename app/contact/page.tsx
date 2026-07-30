@@ -92,7 +92,7 @@ export default function ContactPage() {
             Direct Communication &amp; Telegraph Wires
           </h1>
           <p className="mt-2 text-base font-serif italic text-ink-black/80">
-            Transmit an electronic dispatch directly to Special Correspondent Amey Rasekar regarding
+            Transmit an electronic dispatch directly to Chief Computational Architect Amey Rasekar regarding
             engineering commissions, research collaborations, or technical consultations.
           </p>
         </div>

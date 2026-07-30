@@ -62,9 +62,8 @@ export default function Masthead({
         {/* MAIN HERO IDENTIFICATION: AMEY RASEKAR BRIGHT & BIG */}
         {showHeroName && (
           <div className="text-center py-6 border-b-2 border-paper-tan/60 relative flex flex-col items-center justify-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-ink-black text-paper-cream text-xs font-mono font-bold uppercase tracking-widest rounded-sm mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-paper-red" />
-              SPECIAL CORRESPONDENT &amp; LEAD SYSTEMS ARCHITECT
+            <div className="inline-flex items-center px-3.5 py-1 bg-ink-black text-paper-cream text-xs font-mono font-bold uppercase tracking-widest rounded-sm mb-3">
+              CHIEF COMPUTATIONAL ARCHITECT • PUNE BUREAU
             </div>
 
             <div className="flex items-center justify-center gap-4 sm:gap-8 w-full">
