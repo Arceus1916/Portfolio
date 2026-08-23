@@ -169,7 +169,7 @@ export default function SecretEditionPage() {
                     href="/contact"
                     className="inline-flex items-center gap-1.5 bg-paper-red hover:bg-white hover:text-ink-black text-paper-cream font-mono font-bold text-xs uppercase tracking-wider px-4 py-2 rounded transition-colors shadow-md"
                   >
-                    <span>Proceed to Contact Bureau →</span>
+                    <span>Proceed to Contact Page →</span>
                   </Link>
                 </div>
               </div>

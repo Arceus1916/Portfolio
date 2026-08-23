@@ -4,9 +4,9 @@ import Link from "next/link";
 import { ArrowLeft, Download, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Amey Rasekar - Official Architectural Resume",
+  title: "Amey Rasekar - Official Resume",
   description:
-    "Official Systems Engineering, Deep Learning (CNN), and Full-Stack Architectural Curriculum Vitae of Amey Rasekar — Pune Engineering Bureau.",
+    "Official Systems Engineering, Deep Learning (CNN), and Full-Stack Software Resume of Amey Rasekar — Pune, India.",
   icons: {
     icon: "/icon",
     shortcut: "/icon",
@@ -25,10 +25,10 @@ export default function ResumeViewerPage() {
             className="inline-flex items-center gap-1.5 bg-paper-tan/20 hover:bg-paper-red text-paper-cream px-3 py-1.5 rounded text-xs font-bold uppercase transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Return to Gazette</span>
+            <span>Return to Home</span>
           </Link>
           <span className="text-sm sm:text-base font-bold text-paper-cream tracking-wide">
-            AMEY RASEKAR — OFFICIAL ARCHITECTURAL RESUME (EST. 2005)
+            AMEY RASEKAR — OFFICIAL RESUME
           </span>
         </div>
 
@@ -54,15 +54,11 @@ export default function ResumeViewerPage() {
       </header>
 
       {/* Full-Screen PDF Viewer */}
-      <div
-        className="w-full bg-neutral-900 flex-1 flex flex-col"
-        style={{ height: "calc(100vh - 58px)", minHeight: "850px" }}
-      >
+      <div className="w-full bg-neutral-900 flex-1 flex flex-col min-h-[85vh]">
         <iframe
-          src="/resume.pdf#view=FitH"
-          className="w-full border-0 bg-white block flex-1"
-          style={{ width: "100%", height: "calc(100vh - 58px)", minHeight: "850px" }}
-          title="Amey Rasekar - Official Architectural Resume"
+          src="/resume.pdf#view=Fit"
+          className="w-full h-full border-0 bg-white block flex-1 min-h-[85vh]"
+          title="Amey Rasekar - Official Resume"
         />
       </div>
     </div>

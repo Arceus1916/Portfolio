@@ -170,7 +170,7 @@ export default async function ProjectCaseFilePage({ params }: PageProps) {
           {/* GITHUB DISPATCH FOOTER BUTTON */}
           <footer className="border-t-4 border-double border-paper-tan pt-8 pb-4 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-sm font-serif italic text-ink-black/80">
-              Complete source code and historical git ledger available via the Royal Society Telegraph Wire.
+              Complete source code and project history available on GitHub.
             </div>
 
             <a
@@ -179,7 +179,7 @@ export default async function ProjectCaseFilePage({ params }: PageProps) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-ink-black hover:bg-paper-red text-paper-cream font-mono font-bold text-xs sm:text-sm uppercase tracking-widest px-6 py-3.5 rounded-sm transition-colors shadow-md"
             >
-              <span>View Full Code on GitHub Telegraph Interface</span>
+              <span>View Full Code on GitHub</span>
               <ExternalLink className="w-4 h-4" />
             </a>
           </footer>

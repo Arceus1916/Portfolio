@@ -6,27 +6,27 @@ import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 export default function Footer() {
   const footerLinks = [
     {
-      label: "The Paper Ledger (Resume)",
+      label: "Resume",
       href: QUICK_LINKS.resumePdf,
       icon: <Scroll className="w-4 h-4 text-paper-red shrink-0" />,
     },
     {
-      label: "Git Repository (GitHub)",
+      label: "GitHub",
       href: QUICK_LINKS.github,
       icon: <GithubIcon className="w-4 h-4 text-ink-black shrink-0" />,
     },
     {
-      label: "LinkedIn Telegraph (LinkedIn)",
+      label: "LinkedIn",
       href: QUICK_LINKS.linkedin,
       icon: <LinkedinIcon className="w-4 h-4 text-ink-black shrink-0" />,
     },
     {
-      label: "Author's Quill (Email)",
+      label: "Email",
       href: QUICK_LINKS.email,
       icon: <Mail className="w-4 h-4 text-paper-red shrink-0" />,
     },
     {
-      label: "Telephone Wire (Phone)",
+      label: "Phone",
       href: QUICK_LINKS.phone,
       icon: <Phone className="w-4 h-4 text-ink-black shrink-0" />,
     },
@@ -51,7 +51,7 @@ export default function Footer() {
             The Programmer&apos;s Gazette
           </h2>
           <p className="mt-1 text-xs font-mono uppercase tracking-widest text-ink-black/80">
-            PUNE ENGINEERING BUREAU • CHRONICLE OF ARTIFICIAL INTELLIGENCE &amp; FULL-STACK SYSTEMS
+            PUNE, INDIA • PORTFOLIO OF ARTIFICIAL INTELLIGENCE &amp; FULL-STACK SYSTEMS
           </p>
         </div>
 
@@ -74,10 +74,10 @@ export default function Footer() {
         {/* Lore Notes (Copyright Removed) */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-serif text-ink-black/80 text-center sm:text-left">
           <div className="font-mono text-paper-red font-bold">
-            Powered by Ether &amp; Advanced Mechanical Logic
+            Built with Next.js, React &amp; TypeScript
           </div>
           <div>
-            Editor-in-Chief: <span className="font-bold">Amey Rasekar</span> (Pune, India)
+            Developed by <span className="font-bold">Amey Rasekar</span> (Pune, India)
           </div>
         </div>
       </div>

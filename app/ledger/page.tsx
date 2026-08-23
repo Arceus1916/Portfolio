@@ -10,7 +10,7 @@ import { ArrowLeft, ExternalLink, Download, Scroll, ShieldCheck } from "lucide-r
 export default function LedgerPage() {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-paper-cream">
-      <Masthead title="The Paper Ledger (Resume)" date="OFFICIAL RESUME & CREDENTIAL ARCHIVE" />
+      <Masthead title="Resume" date="OFFICIAL CV & CREDENTIAL ARCHIVE" />
 
       <main className="flex-1 max-w-[1200px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="border-b-2 border-ink-black pb-3 mb-6 flex flex-wrap items-center justify-between gap-4 text-xs font-mono uppercase tracking-widest text-ink-black">
@@ -19,12 +19,12 @@ export default function LedgerPage() {
             className="inline-flex items-center gap-2 bg-paper-tan/20 hover:bg-ink-black hover:text-paper-cream px-3 py-1.5 border border-paper-tan rounded transition-colors font-bold"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Return to Front-Page Edition</span>
+            <span>Return to Home</span>
           </Link>
 
           <span className="flex items-center gap-1.5 font-bold text-paper-red">
             <Scroll className="w-4 h-4" />
-            AMEY RASEKAR • FORMAL ARCHITECTURAL CURRICULUM VITAE
+            AMEY RASEKAR • CURRICULUM VITAE
           </span>
         </div>
 
@@ -35,7 +35,7 @@ export default function LedgerPage() {
               className="text-2xl sm:text-4xl font-bold uppercase tracking-tight text-ink-black font-headline"
               style={{ fontFamily: "var(--font-headline)" }}
             >
-              The Paper Ledger (Official Resume)
+              Resume (Official CV)
             </h1>
             <p className="text-sm font-serif italic text-ink-black/85 mt-1">
               Verified record of systems engineering, deep neural architectures, and formal

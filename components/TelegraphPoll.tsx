@@ -113,7 +113,7 @@ export default function TelegraphPoll() {
         <div className="mt-6 p-4 bg-emerald-950 text-paper-cream rounded-sm border border-emerald-500/50 flex items-center justify-between text-xs font-mono uppercase animate-fade-in">
           <span className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-            VOTE REGISTERED ON PUNE BUREAU TELEGRAPH LEDGER!
+            VOTE REGISTERED ON PUNE, INDIA LEDGER!
           </span>
           <span className="text-emerald-400 font-bold">● THANK YOU FOR YOUR DISPATCH</span>
         </div>

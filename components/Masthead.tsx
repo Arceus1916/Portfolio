@@ -15,26 +15,26 @@ interface MastheadProps {
 
 export default function Masthead({
   title = "The Programmer's Gazette",
-  date = "Pune Engineering Bureau Edition — MMV (2005)",
-  edition = "Vol. CCLXIV — Royal Society of Computational Engineers",
+  date = "Pune Edition — 2005",
+  edition = "Developer Portfolio — Amey Rasekar",
   showHeroName = false,
 }: MastheadProps) {
   const navLinks = [
     {
-      label: "The Paper Ledger",
-      subLabel: "(Resume)",
+      label: "Resume",
+      subLabel: "(Official CV)",
       href: QUICK_LINKS.resumePdf,
       icon: <Scroll className="w-4 h-4 mr-1.5 inline-block text-paper-red" />,
     },
     {
-      label: "Telegraph Archives",
-      subLabel: "(GitHub)",
+      label: "GitHub",
+      subLabel: "(Projects)",
       href: QUICK_LINKS.github,
       icon: <Radio className="w-4 h-4 mr-1.5 inline-block text-paper-red" />,
     },
     {
-      label: "Author's Quill",
-      subLabel: "(Email & Contact)",
+      label: "Contact",
+      subLabel: "(Get in Touch)",
       href: QUICK_LINKS.email,
       icon: <PenTool className="w-4 h-4 mr-1.5 inline-block text-paper-red" />,
     },
@@ -63,7 +63,7 @@ export default function Masthead({
         {showHeroName && (
           <div className="text-center py-6 border-b-2 border-paper-tan/60 relative flex flex-col items-center justify-center">
             <div className="inline-flex items-center px-3.5 py-1 bg-ink-black text-paper-cream text-[10px] sm:text-xs font-mono font-bold uppercase tracking-widest rounded-sm mb-3 text-center max-w-full leading-snug">
-              CHIEF COMPUTATIONAL ARCHITECT • PUNE BUREAU
+              SOFTWARE ASSOCIATE • PUNE, INDIA
             </div>
 
             <div className="flex items-center justify-center gap-4 sm:gap-8 w-full">
@@ -90,7 +90,7 @@ export default function Masthead({
                   <span className="text-paper-red">Amey</span> Rasekar
                 </h1>
                 <p className="mt-3 text-base sm:text-xl md:text-2xl font-bold uppercase tracking-wider text-ink-black font-serif text-balance leading-snug">
-                  Full-Stack Engineering &amp; Artificial Intelligence Architect
+                  Software Associate • Full-Stack &amp; AI Developer
                 </p>
                 <p className="mt-2 text-[10px] sm:text-xs md:text-sm font-mono uppercase tracking-widest text-ink-black/75 text-balance leading-relaxed">
                   PUNE, INDIA • DEEP LEARNING • SCALABLE BACKEND SYSTEMS • TYPE-SAFE WEB
@@ -116,7 +116,7 @@ export default function Masthead({
 
         {/* Date Line & Location Strip (Easter Egg Link on Date) */}
         <div className="border-b-2 border-ink-black py-2 my-2 flex flex-col sm:flex-row flex-wrap items-center justify-center sm:justify-between gap-1 sm:gap-2 text-center text-xs sm:text-sm font-serif uppercase tracking-wider text-ink-black">
-          <span className="font-bold">LOCATION: PUNE ENGINEERING BUREAU, INDIA</span>
+          <span className="font-bold">LOCATION: PUNE, INDIA</span>
           <Link
             href="/folds/secret-edition"
             title="Click to discover The Secret Folds supplement (Easter Egg)"
@@ -127,7 +127,7 @@ export default function Masthead({
           <span className="font-bold">PRICE: ONE PENNY (OR GITHUB STAR)</span>
         </div>
 
-        {/* Top Navigation Bar: The Paper Ledger, Telegraph Archives, Author's Quill */}
+        {/* Top Navigation Bar: Resume, GitHub, Contact */}
         <nav
           aria-label="Main Victorian Navigation"
           className="pt-2 pb-1 flex flex-wrap items-center justify-center gap-2 sm:gap-6 md:gap-8"

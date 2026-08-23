@@ -18,24 +18,24 @@ export default function ContactPage() {
   const handleDispatch = (e: React.FormEvent) => {
     e.preventDefault();
     const mailtoUrl = `mailto:rasekaramey@gmail.com?subject=${encodeURIComponent(
-      `[TELEGRAPH DISPATCH] ${subject || "Inquiry from Gazette Visitor"}`
+      `[PORTFOLIO CONTACT] ${subject || "Inquiry from Portfolio Visitor"}`
     )}&body=${encodeURIComponent(
-      `From: ${senderName} (${senderEmail})\n\nDispatch Content:\n${message}\n\n--\nSent via The Programmer's Gazette Telegraph Interface`
+      `From: ${senderName} (${senderEmail})\n\nMessage:\n${message}\n\n--\nSent via Amey Rasekar Portfolio`
     )}`;
     window.location.href = mailtoUrl;
   };
 
   const contactCards = [
     {
-      title: "Electronic Mail Dispatch",
+      title: "Email Address",
       label: "Email",
       value: "rasekaramey@gmail.com",
       href: QUICK_LINKS.email,
       icon: <Mail className="w-5 h-5 text-paper-red" />,
-      badge: "PRIMARY BUREAU",
+      badge: "PRIMARY",
     },
     {
-      title: "Telephone Wire Connection",
+      title: "Phone Number",
       label: "Phone Number",
       value: "+91 94033-20981",
       href: QUICK_LINKS.phone,
@@ -43,34 +43,34 @@ export default function ContactPage() {
       badge: "DIRECT LINE",
     },
     {
-      title: "GitHub Telegraph Network",
+      title: "GitHub Profile",
       label: "GitHub Profile",
       value: "github.com/Arceus1916",
       href: QUICK_LINKS.github,
       icon: <GithubIcon className="w-5 h-5 text-paper-red" />,
-      badge: "CODE REPOSITORY",
+      badge: "REPOSITORIES",
     },
     {
-      title: "LinkedIn Professional Wire",
+      title: "LinkedIn Profile",
       label: "LinkedIn",
       value: "amey-rasekar",
       href: QUICK_LINKS.linkedin,
       icon: <LinkedinIcon className="w-5 h-5 text-ink-black" />,
-      badge: "EXCHANGE WIRE",
+      badge: "PROFESSIONAL",
     },
     {
-      title: "Instagram Visual Dispatch",
+      title: "Instagram Profile",
       label: "Instagram",
       value: "@arceus1916",
       href: QUICK_LINKS.instagram,
       icon: <InstagramIcon className="w-5 h-5 text-paper-red" />,
-      badge: "SOCIAL BULLETIN",
+      badge: "SOCIAL",
     },
   ];
 
   return (
     <div className="min-h-screen flex flex-col justify-between">
-      <Masthead title="The Telegraph Office" date="PUNE BUREAU DISPATCH CENTER" />
+      <Masthead title="Contact & Inquiry" date="PUNE, INDIA — CONTACT CENTER" />
 
       <main className="flex-1 max-w-[1100px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header Strip with Return Button */}
@@ -80,17 +80,17 @@ export default function ContactPage() {
             className="inline-flex items-center gap-2 bg-paper-tan/20 hover:bg-ink-black hover:text-paper-cream px-3 py-1.5 border border-paper-tan rounded transition-colors font-bold text-ink-black"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Return to Front-Page Edition</span>
+            <span>Return to Home</span>
           </Link>
 
           <span className="flex items-center gap-1.5 font-bold text-paper-red">
             <Radio className="w-4 h-4 animate-pulse" />
-            THE TELEGRAPH OFFICE — DISPATCH &amp; INQUIRY BUREAU
+            CONTACT OFFICE — DISPATCH &amp; INQUIRY
           </span>
 
           <span className="flex items-center gap-1">
             <MapPin className="w-3.5 h-3.5" />
-            PUNE ENGINEERING BUREAU, INDIA
+            PUNE, INDIA
           </span>
         </div>
 
@@ -99,10 +99,10 @@ export default function ContactPage() {
             className="text-3xl sm:text-5xl font-bold uppercase tracking-tight text-ink-black font-headline"
             style={{ fontFamily: "var(--font-headline)" }}
           >
-            Direct Communication &amp; Telegraph Wires
+            Direct Contact &amp; Inquiry
           </h1>
           <p className="mt-2 text-base font-serif italic text-ink-black/80">
-            Transmit an electronic dispatch directly to Chief Computational Architect Amey Rasekar regarding
+            Send a message directly to Software Associate Amey Rasekar regarding
             engineering commissions, research collaborations, or technical consultations.
           </p>
         </div>
@@ -148,7 +148,7 @@ export default function ContactPage() {
 
         {/* Dispatch Form (Author's Quill) */}
         <section
-          aria-label="Author's Quill Dispatch Form"
+          aria-label="Contact Form"
           className="max-w-2xl mx-auto border-4 border-double border-paper-tan bg-paper-cream p-6 sm:p-8 rounded-sm shadow-sm"
         >
           <div className="border-b border-paper-tan pb-3 mb-6">
@@ -156,10 +156,10 @@ export default function ContactPage() {
               className="text-2xl font-bold uppercase tracking-tight text-ink-black font-headline"
               style={{ fontFamily: "var(--font-headline)" }}
             >
-              Author&apos;s Quill (Email &amp; Contact) — Transmit Dispatch
+              Contact Form — Send a Message
             </h2>
             <p className="text-xs font-mono uppercase text-ink-black/70 mt-1">
-              COMPOSE YOUR MESSAGE BELOW TO TRANSMIT VIA TELEGRAPH INTERFACE
+              COMPOSE YOUR MESSAGE BELOW TO SEND AN EMAIL
             </p>
           </div>
 
@@ -167,12 +167,12 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-xs font-mono font-bold uppercase tracking-wider text-ink-black mb-1">
-                  Sender&apos;s Name *
+                  Your Name *
                 </label>
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Sir/Madam Recruiter"
+                  placeholder="e.g. Recruiter / Collaborator"
                   value={senderName}
                   onChange={(e) => setSenderName(e.target.value)}
                   className="w-full bg-paper-cream border-b-2 border-paper-tan focus:border-paper-red py-2 px-1 text-ink-black placeholder:text-ink-black/40 focus:outline-none font-serif text-sm transition-colors"
@@ -180,7 +180,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <label className="block text-xs font-mono font-bold uppercase tracking-wider text-ink-black mb-1">
-                  Electronic Address *
+                  Email Address *
                 </label>
                 <input
                   type="email"
@@ -195,12 +195,12 @@ export default function ContactPage() {
 
             <div>
               <label className="block text-xs font-mono font-bold uppercase tracking-wider text-ink-black mb-1">
-                Dispatch Subject *
+                Subject *
               </label>
               <input
                 type="text"
                 required
-                placeholder="e.g. Commission Inquiry / Architectural Consultation"
+                placeholder="e.g. Project Inquiry / Consultation"
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
                 className="w-full bg-paper-cream border-b-2 border-paper-tan focus:border-paper-red py-2 px-1 text-ink-black placeholder:text-ink-black/40 focus:outline-none font-serif text-sm transition-colors"
@@ -214,7 +214,7 @@ export default function ContactPage() {
               <textarea
                 required
                 rows={5}
-                placeholder="State your business or inquiry regarding full-stack systems, deep learning models, or engineering appointments..."
+                placeholder="Write your message regarding full-stack systems, deep learning models, or engineering opportunities..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 className="w-full bg-paper-cream border-2 border-paper-tan focus:border-paper-red p-3 text-ink-black placeholder:text-ink-black/40 focus:outline-none font-serif text-sm rounded-sm transition-colors"
@@ -226,7 +226,7 @@ export default function ContactPage() {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-ink-black hover:bg-paper-red text-paper-cream font-mono font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-sm transition-colors shadow-sm"
             >
               <Send className="w-4 h-4" />
-              Transmit Dispatch via Quill
+              Send Message via Email
             </button>
           </form>
         </section>

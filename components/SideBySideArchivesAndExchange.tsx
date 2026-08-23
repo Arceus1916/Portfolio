@@ -126,7 +126,7 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-ink-black text-paper-cream text-xs font-mono font-bold uppercase tracking-widest rounded-sm mb-2">
             <Sparkles className="w-3.5 h-3.5 text-paper-red" />
-            <span>PUNE BUREAU TWIN-COLUMN SPECIAL EXHIBIT</span>
+            <span>PUNE, INDIA — SPECIAL TECHNICAL EXHIBIT</span>
           </div>
           <h2
             className="text-2xl sm:text-4xl font-bold uppercase tracking-tight text-ink-black font-headline"
@@ -147,7 +147,13 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
       {/* TWO-COLUMN NEWSPAPER BROADSHEET LAYOUT: LEFT = EXCHANGE, RIGHT = GITHUB ARCHIVES */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-6">
         {/* ==================== LEFT COLUMN: COMPUTATIONAL EXCHANGE ==================== */}
-        <div className="flex flex-col h-full border-2 border-ink-black bg-paper-cream rounded-sm overflow-hidden shadow-md">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col h-full border-2 border-ink-black bg-paper-cream rounded-sm overflow-hidden shadow-md hover:border-paper-red hover:shadow-[0_8px_30px_rgba(167,42,36,0.12)] transition-all duration-300"
+        >
           {/* Engraved Header */}
           <div className="border-b-2 border-ink-black bg-paper-tan/20 p-4 flex flex-col gap-2">
             <div className="flex items-center justify-between">
@@ -163,10 +169,10 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
               style={{ fontFamily: "var(--font-headline)" }}
             >
               <TrendingUp className="w-6 h-6 text-paper-red shrink-0" />
-              Pune Engineering Bureau — Computational Exchange
+              Computational exchange index
             </h3>
             <p className="text-xs font-mono uppercase tracking-wider text-ink-black/80">
-              OFFICIAL MARKET GRID OF COMPUTATIONAL INSTRUMENTS &amp; TECHNOLOGICAL EQUITIES
+              REAL-TIME QUOTATION OF TECHNICAL EQUITIES, INSTRUMENTS &amp; COMPETENCIES
             </p>
           </div>
 
@@ -176,65 +182,43 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
               <button
                 type="button"
                 onClick={() => setExchangePaused(!exchangePaused)}
-                className={`inline-flex items-center gap-1.5 px-3 py-1 rounded text-xs font-bold uppercase tracking-wider transition-colors ${
-                  exchangePaused
-                    ? "bg-paper-red text-paper-cream hover:bg-white hover:text-ink-black"
-                    : "bg-paper-tan/30 hover:bg-paper-tan/50 text-paper-cream"
-                }`}
-                title={exchangePaused ? "Resume Automatic Flipping" : "Pause Automatic Flipping"}
+                aria-label={exchangePaused ? "Resume auto-flip" : "Pause auto-flip"}
+                className="flex items-center gap-1.5 px-2.5 py-1 bg-paper-red hover:bg-paper-tan text-paper-cream font-bold rounded-xs transition-colors"
               >
                 {exchangePaused ? (
                   <>
-                    <Play className="w-3.5 h-3.5 fill-current" />
-                    <span>RESUME FLIP</span>
+                    <Play className="w-3.5 h-3.5" />
+                    <span>RESUME</span>
                   </>
                 ) : (
                   <>
-                    <Pause className="w-3.5 h-3.5 fill-current" />
-                    <span>PAUSE FLIP</span>
+                    <Pause className="w-3.5 h-3.5" />
+                    <span>PAUSE</span>
                   </>
                 )}
               </button>
-
-              <span className="text-[10px] uppercase text-paper-cream/70 hidden sm:inline">
-                {exchangePaused ? "● PAUSED" : "● AUTO-TURNING (4.5s)"}
+              <span className="text-[11px] text-paper-cream/80 hidden sm:inline">
+                {exchangePaused ? "[AUTO-FLIP PAUSED]" : "[FLIPS EVERY 4.5s]"}
               </span>
             </div>
 
-            {/* Pagination Controls & Dots */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5">
               <button
                 type="button"
                 onClick={handleExchangePrev}
-                aria-label="Previous Sector"
-                className="p-1 hover:bg-paper-red rounded transition-colors text-paper-cream"
+                aria-label="Previous Market Sector"
+                className="p-1 bg-paper-tan/20 hover:bg-paper-red text-paper-cream rounded-xs transition-colors"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-
-              <div className="flex items-center gap-1.5 px-1">
-                {STOCK_MARKET_DATA.map((_, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    onClick={() => {
-                      setExchangeIndex(i);
-                    }}
-                    aria-label={`Go to sector ${i + 1}`}
-                    className={`w-2.5 h-2.5 rounded-full border transition-all ${
-                      exchangeIndex === i
-                        ? "bg-paper-red border-paper-cream scale-125"
-                        : "bg-paper-cream/30 border-paper-cream/60 hover:bg-paper-cream"
-                    }`}
-                  />
-                ))}
-              </div>
-
+              <span className="px-2 py-0.5 bg-ink-black border border-paper-tan/40 text-[11px] font-bold">
+                0{exchangeIndex + 1} / 0{totalSectors}
+              </span>
               <button
                 type="button"
                 onClick={handleExchangeNext}
-                aria-label="Next Sector"
-                className="p-1 hover:bg-paper-red rounded transition-colors text-paper-cream"
+                aria-label="Next Market Sector"
+                className="p-1 bg-paper-tan/20 hover:bg-paper-red text-paper-cream rounded-xs transition-colors"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -286,8 +270,8 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
                         </div>
 
                         <div className="text-right">
-                          <div className="text-sm font-mono font-bold text-paper-red">
-                            {item.yieldIndex}
+                          <div className={`text-sm font-mono font-bold flex items-center justify-end gap-1 ${item.trend === "up" ? "text-emerald-600" : "text-red-600"}`}>
+                            {item.trend === "up" ? "▲" : "▼"} {item.yieldIndex}
                           </div>
                           <span className="text-[10px] font-mono font-bold uppercase bg-paper-tan/20 text-ink-black px-1.5 py-0.5 rounded">
                             {item.status}
@@ -298,18 +282,24 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
                   </div>
                 </div>
 
-                {/* Card Footer Metric */}
-                <div className="mt-6 pt-3 border-t border-paper-tan/60 flex items-center justify-between text-xs font-mono uppercase text-ink-black/70">
-                  <span>● SECTOR COMPLIANCE: 100% EMPIRICAL</span>
-                  <span className="font-bold text-paper-red">PAGE 0{exchangeIndex + 1} / 04</span>
+                {/* Sector Footer Note */}
+                <div className="mt-6 pt-3 border-t border-paper-tan/60 flex flex-wrap items-center justify-between gap-1 text-[10px] sm:text-xs font-mono uppercase text-ink-black/70">
+                  <span>● AUDITED TECHNICAL LEDGER • PUNE, INDIA</span>
+                  <span className="font-bold text-paper-red">SECTOR 0{exchangeIndex + 1} / 04</span>
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
-        </div>
+        </motion.div>
 
         {/* ==================== RIGHT COLUMN: TOP FLAGSHIP GITHUB ARCHIVES ==================== */}
-        <div className="flex flex-col h-full border-2 border-ink-black bg-paper-cream rounded-sm overflow-hidden shadow-md">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+          className="flex flex-col h-full border-2 border-ink-black bg-paper-cream rounded-sm overflow-hidden shadow-md hover:border-paper-red hover:shadow-[0_8px_30px_rgba(167,42,36,0.12)] transition-all duration-300"
+        >
           {/* Engraved Header */}
           <div className="border-b-2 border-ink-black bg-paper-tan/20 p-4 flex flex-col gap-2">
             <div className="flex items-center justify-between">
@@ -338,80 +328,58 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
               <button
                 type="button"
                 onClick={() => setArchivePaused(!archivePaused)}
-                className={`inline-flex items-center gap-1.5 px-3 py-1 rounded text-xs font-bold uppercase tracking-wider transition-colors ${
-                  archivePaused
-                    ? "bg-paper-red text-paper-cream hover:bg-white hover:text-ink-black"
-                    : "bg-paper-tan/30 hover:bg-paper-tan/50 text-paper-cream"
-                }`}
-                title={archivePaused ? "Resume Automatic Flipping" : "Pause Automatic Flipping"}
+                aria-label={archivePaused ? "Resume auto-flip" : "Pause auto-flip"}
+                className="flex items-center gap-1.5 px-2.5 py-1 bg-paper-red hover:bg-paper-tan text-paper-cream font-bold rounded-xs transition-colors"
               >
                 {archivePaused ? (
                   <>
-                    <Play className="w-3.5 h-3.5 fill-current" />
-                    <span>RESUME FLIP</span>
+                    <Play className="w-3.5 h-3.5" />
+                    <span>RESUME</span>
                   </>
                 ) : (
                   <>
-                    <Pause className="w-3.5 h-3.5 fill-current" />
-                    <span>PAUSE FLIP</span>
+                    <Pause className="w-3.5 h-3.5" />
+                    <span>PAUSE</span>
                   </>
                 )}
               </button>
-
-              <span className="text-[10px] uppercase text-paper-cream/70 hidden sm:inline">
-                {archivePaused ? "● PAUSED" : "● AUTO-TURNING (5s)"}
+              <span className="text-[11px] text-paper-cream/80 hidden sm:inline">
+                {archivePaused ? "[AUTO-FLIP PAUSED]" : "[FLIPS EVERY 4.5s]"}
               </span>
             </div>
 
-            {/* Pagination Controls & Dots */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5">
               <button
                 type="button"
                 onClick={handleArchivePrev}
-                aria-label="Previous GitHub Archive"
-                className="p-1 hover:bg-paper-red rounded transition-colors text-paper-cream"
+                aria-label="Previous Archive"
+                className="p-1 bg-paper-tan/20 hover:bg-paper-red text-paper-cream rounded-xs transition-colors"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-
-              <div className="flex items-center gap-1.5 px-1">
-                {top4Projects.map((_, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    onClick={() => {
-                      setArchiveIndex(i);
-                    }}
-                    aria-label={`Go to archive ${i + 1}`}
-                    className={`w-2.5 h-2.5 rounded-full border transition-all ${
-                      archiveIndex === i
-                        ? "bg-paper-red border-paper-cream scale-125"
-                        : "bg-paper-cream/30 border-paper-cream/60 hover:bg-paper-cream"
-                    }`}
-                  />
-                ))}
-              </div>
-
+              <span className="px-2 py-0.5 bg-ink-black border border-paper-tan/40 text-[11px] font-bold">
+                0{archiveIndex + 1} / 0{totalArchives}
+              </span>
               <button
                 type="button"
                 onClick={handleArchiveNext}
-                aria-label="Next GitHub Archive"
-                className="p-1 hover:bg-paper-red rounded transition-colors text-paper-cream"
+                aria-label="Next Archive"
+                className="p-1 bg-paper-tan/20 hover:bg-paper-red text-paper-cream rounded-xs transition-colors"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
             </div>
           </div>
 
-          {/* Animated Flipping GitHub Project Dossier Container */}
-          <div className="flex-1 p-5 sm:p-6 bg-paper-cream relative min-h-[380px] flex flex-col justify-between">
+          {/* Interactive GitHub Dossier Card with Auto-Flip and AnimatePresence */}
+          <div className="p-4 sm:p-6 flex-1 flex flex-col justify-between bg-paper-cream relative">
             <AnimatePresence mode="wait">
               <motion.div
-                key={archiveIndex}
-                initial={{ rotateX: 25, opacity: 0, scale: 0.96 }}
-                animate={{ rotateX: 0, opacity: 1, scale: 1 }}
-                exit={{ rotateX: -25, opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
+                key={currentArchive.repo}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
                 className="flex flex-col h-full justify-between"
               >
                 <div>
@@ -435,7 +403,7 @@ export default function SideBySideArchivesAndExchange({ projects }: SideBySidePr
               </motion.div>
             </AnimatePresence>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* ==================== 16-WEEK MECHANICAL CONTRIBUTION LEDGER ==================== */}

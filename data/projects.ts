@@ -22,7 +22,7 @@ export const PROJECT_CASE_FILES: Record<string, ProjectCaseFile> = {
     title: "Ocean Intelligence: Centralized Marine Research Platform",
     subtitle:
       "An investigation into full-stack marine data ingestion pipelines and real-time analytical processing.",
-    author: "Amey Rasekar, Chief Computational Architect — Pune Engineering Bureau",
+    author: "Amey Rasekar, Software Associate — Pune, India",
     date: "Special Marine Edition • MMV (2005)",
     synopsis:
       "In the vast ocean of biological marine metrics, fragmented data streams have long plagued oceanographers and natural philosophers. My investigation into Ocean Intelligence reveals an ingenious centralized platform I engineered to harmonize disparate marine biodiversity datasets. By coupling an automated data ingestion pipeline with an enterprise PostgreSQL relational ledger, I transformed chaotic raw telemetry into structured, queryable oceanographic intelligence.",
@@ -87,7 +87,7 @@ class MarineDataTelegraph:
     title: "Early Detection of Mental Illness via CNN & Interactive Agent",
     subtitle:
       "Deep-learning convolutional neural networks trained for automated Alzheimer’s stage classification from MRI scans.",
-    author: "Amey Rasekar, Chief Computational Architect — Pune Engineering Bureau",
+    author: "Amey Rasekar, Software Associate — Pune, India",
     date: "Medical Engineering Edition • MMV (2005)",
     synopsis:
       "The diagnosis of subtle neurological decay requires precision beyond the naked eye. In this milestone investigation, I engineered a Convolutional Neural Network (CNN) architecture capable of detecting early-stage Alzheimer's disease from magnetic resonance imaging (MRI) scans. Coupled with my interactive conversational diagnostic agent, this system offers both clinical precision and accessible initial triage.",
@@ -141,7 +141,7 @@ class NeurologicalClassifierCNN(nn.Module):
     title: "EnvDex: Premium Biodiversity Journal & Species Archive",
     subtitle:
       "A Pokédex-style offline-first mobile ecosystem for capturing and chronicling biological specimens in the field.",
-    author: "Amey Rasekar, Chief Computational Architect — Pune Engineering Bureau",
+    author: "Amey Rasekar, Software Associate — Pune, India",
     date: "Naturalists' Gazette Edition • MMV (2005)",
     synopsis:
       "Field naturalists embarking on botanical and zoological expeditions require an instrument that operates without reliance on continuous telegraph wire connections. I created EnvDex as a state-of-the-art mobile ecosystem designed to capture, categorize, and GPS-tag local flora and fauna. Functioning as a digital field journal, it empowers users to document biodiversity with offline-first persistence.",
@@ -200,7 +200,7 @@ export class BiologicalSpecimen extends Realm.Object<BiologicalSpecimen> {
     title: "URRJA: Decentralized Peer-to-Peer Energy Trading Prototype",
     subtitle:
       "A distributed ledger and trading protocol enabling direct residential solar surplus exchange.",
-    author: "Amey Rasekar, Chief Computational Architect — Pune Engineering Bureau",
+    author: "Amey Rasekar, Software Associate — Pune, India",
     date: "Energy & Mechanization Edition • MMV (2005)",
     synopsis:
       "As decentralized solar mechanization spreads across residential quarters, traditional centralized power distribution networks face structural friction. I introduced URRJA as an innovative peer-to-peer energy exchange protocol. Households generating surplus wattage can transmit their excess capacity directly to neighboring nodes through verifiable, cryptographic contract logic that I architected.",
@@ -254,7 +254,7 @@ export class EnergyExchangeLedger {
     title: "The Programmer's Gazette: Victorian Interactive Portfolio",
     subtitle:
       "An authentic 19th-century newspaper broadsheet web app built with Next.js 15, Tailwind CSS v4, and Stitch MCP.",
-    author: "Amey Rasekar, Chief Computational Architect — Pune Engineering Bureau",
+    author: "Amey Rasekar, Software Associate — Pune, India",
     date: "Special Engineering Edition • MMV (2005)",
     synopsis:
       "This very publication! I designed and built this interactive developer portfolio as a Victorian newspaper ('The Programmer's Gazette') founded in 2005 by the Royal Society of Computational Engineers. Combining nostalgia with state-of-the-art web performance, I implemented ETag caching, custom color tokens, authentic typography, and interactive telegraph interfaces.",
@@ -299,7 +299,7 @@ export class EnergyExchangeLedger {
     title: "Algorithmic & Systems Engineering Archive",
     subtitle:
       "Live algorithmic repository and automated computational pipelines synchronized from GitHub.",
-    author: "Amey Rasekar, Chief Computational Architect — Pune Engineering Bureau",
+    author: "Amey Rasekar, Software Associate — Pune, India",
     date: "Algorithmic Bureau Edition • MMV (2005)",
     synopsis:
       "A living chronicle of algorithmic experimentation, data structures, and automated computational pipelines that I maintain on GitHub. This repository serves as my personal testing ground for systems engineering, database optimization, and machine learning utilities.",

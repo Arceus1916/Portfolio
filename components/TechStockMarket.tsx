@@ -6,8 +6,9 @@ import { TrendingUp, Award, ShieldCheck, Cpu, Database, Layout, Sparkles } from 
 export interface StockInstrument {
   ticker: string;
   name: string;
-  yieldIndex: string; // e.g., "99.8%" or "AA+"
+  yieldIndex: string; // e.g., "85"
   status: string; // e.g., "HIGH YIELD"
+  trend: "up" | "down";
 }
 
 export interface SectorCategory {
@@ -19,37 +20,37 @@ export const STOCK_MARKET_DATA: SectorCategory[] = [
   {
     sectorName: "AI & NEURAL ENGINES",
     instruments: [
-      { ticker: "PYTH", name: "Python 3.11+", yieldIndex: "99.8%", status: "PRIMARY LOGIC" },
-      { ticker: "PTCH", name: "PyTorch & CNN Architecture", yieldIndex: "98.5%", status: "HIGH YIELD" },
-      { ticker: "SKLN", name: "Scikit-Learn & ML Pipelines", yieldIndex: "95.0%", status: "STABLE EQUITY" },
-      { ticker: "NPPD", name: "NumPy & Pandas Vectors", yieldIndex: "99.1%", status: "HIGH VOLUME" },
+      { ticker: "PYTH", name: "Python 3.11+", yieldIndex: "82", status: "PRIMARY LOGIC", trend: "up" },
+      { ticker: "PTCH", name: "PyTorch & CNN Architecture", yieldIndex: "78", status: "HIGH YIELD", trend: "up" },
+      { ticker: "SKLN", name: "Scikit-Learn & ML Pipelines", yieldIndex: "45", status: "STABLE EQUITY", trend: "down" },
+      { ticker: "NPPD", name: "NumPy & Pandas Vectors", yieldIndex: "68", status: "HIGH VOLUME", trend: "up" },
     ],
   },
   {
     sectorName: "WEB & FRONT-END APPARATUS",
     instruments: [
-      { ticker: "NX15", name: "Next.js 15 (App Router)", yieldIndex: "99.9%", status: "TOP GROWTH" },
-      { ticker: "RCT19", name: "React 19 & React Native", yieldIndex: "99.5%", status: "HIGH YIELD" },
-      { ticker: "TYPS", name: "TypeScript 5.0 (Strict)", yieldIndex: "99.7%", status: "GOLD STANDARD" },
-      { ticker: "TLW4", name: "Tailwind CSS v4 Engine", yieldIndex: "98.9%", status: "STABLE EQUITY" },
+      { ticker: "NX15", name: "Next.js 15 (App Router)", yieldIndex: "85", status: "TOP GROWTH", trend: "up" },
+      { ticker: "RCT19", name: "React 19 & React Native", yieldIndex: "79", status: "HIGH YIELD", trend: "up" },
+      { ticker: "TYPS", name: "TypeScript 5.0 (Strict)", yieldIndex: "81", status: "GOLD STANDARD", trend: "up" },
+      { ticker: "TLW4", name: "Tailwind CSS v4 Engine", yieldIndex: "72", status: "STABLE EQUITY", trend: "down" },
     ],
   },
   {
     sectorName: "BACK-END & DISTRIBUTED LEDGERS",
     instruments: [
-      { ticker: "NODE", name: "Node.js Runtime & Express", yieldIndex: "98.8%", status: "HIGH YIELD" },
-      { ticker: "SPRB", name: "Spring Boot Microservices", yieldIndex: "97.5%", status: "ENTERPRISE" },
-      { ticker: "REST", name: "RESTful & Telegraph APIs", yieldIndex: "99.6%", status: "STABLE EQUITY" },
-      { ticker: "P2PL", name: "Decentralized P2P Trading", yieldIndex: "96.4%", status: "INNOVATION" },
+      { ticker: "NODE", name: "Node.js Runtime & Express", yieldIndex: "75", status: "HIGH YIELD", trend: "up" },
+      { ticker: "SPRB", name: "Spring Boot Microservices", yieldIndex: "35", status: "ENTERPRISE", trend: "down" },
+      { ticker: "REST", name: "RESTful & Telegraph APIs", yieldIndex: "60", status: "STABLE EQUITY", trend: "up" },
+      { ticker: "P2PL", name: "Decentralized P2P Trading", yieldIndex: "25", status: "INNOVATION", trend: "down" },
     ],
   },
   {
     sectorName: "DATA INGESTION & TELEMETRY",
     instruments: [
-      { ticker: "PSQL", name: "PostgreSQL & Relational DB", yieldIndex: "99.4%", status: "CORE LEDGER" },
-      { ticker: "RLDB", name: "Realm Offline-First DB", yieldIndex: "95.8%", status: "STABLE EQUITY" },
-      { ticker: "GITW", name: "Git & Version Control Wire", yieldIndex: "99.9%", status: "HIGH VOLUME" },
-      { ticker: "DOCK", name: "Docker & Container Eng", yieldIndex: "97.0%", status: "RELIABLE" },
+      { ticker: "PSQL", name: "PostgreSQL & Relational DB", yieldIndex: "70", status: "CORE LEDGER", trend: "up" },
+      { ticker: "RLDB", name: "Realm Offline-First DB", yieldIndex: "15", status: "STABLE EQUITY", trend: "down" },
+      { ticker: "GITW", name: "Git & Version Control Wire", yieldIndex: "84", status: "HIGH VOLUME", trend: "up" },
+      { ticker: "DOCK", name: "Docker & Container Eng", yieldIndex: "55", status: "RELIABLE", trend: "down" },
     ],
   },
 ];
@@ -123,7 +124,9 @@ export default function TechStockMarket() {
           {STOCK_MARKET_DATA.flatMap((s) => s.instruments).map((item, idx) => (
             <span key={item.ticker} className="mr-6">
               <span className="text-paper-cream font-bold">{item.ticker}</span> ({item.name}){" "}
-              <span className="text-emerald-400 font-bold">{item.yieldIndex}</span>{" "}
+              <span className={item.trend === "up" ? "text-emerald-400 font-bold" : "text-red-400 font-bold"}>
+                {item.trend === "up" ? "▲" : "▼"} {item.yieldIndex}
+              </span>{" "}
               <span className="text-paper-cream/60">[{item.status}]</span>
               {idx < 20 ? "  •  " : ""}
             </span>
@@ -169,8 +172,8 @@ export default function TechStockMarket() {
                     <span className="text-xs font-mono text-ink-black/70 hidden sm:inline">
                       [{inst.status}]
                     </span>
-                    <span className="font-mono font-bold text-sm text-paper-red">
-                      {inst.yieldIndex}
+                    <span className={`font-mono font-bold text-sm flex items-center gap-1 ${inst.trend === "up" ? "text-emerald-600" : "text-red-600"}`}>
+                      {inst.trend === "up" ? "▲" : "▼"} {inst.yieldIndex}
                     </span>
                   </div>
                 </div>
@@ -180,7 +183,7 @@ export default function TechStockMarket() {
             {/* Sector Footer Note */}
             <div className="bg-paper-tan/10 px-4 py-1.5 border-t border-paper-tan/40 text-[10px] font-mono uppercase text-ink-black/60 flex justify-between">
               <span>● CERTIFIED ROYAL SOCIETY YIELD</span>
-              <span>● VERIFIED IN PUNE BUREAU</span>
+              <span>● VERIFIED IN PUNE, INDIA</span>
             </div>
           </div>
         ))}

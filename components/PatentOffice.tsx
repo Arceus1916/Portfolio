@@ -17,7 +17,7 @@ const PATENTS: PatentItem[] = [
     id: "ai-engine",
     patentNo: "PATENT NO. 2005-CNN",
     title: "90%+ Accuracy Alzheimer's Diagnostic Network",
-    inventor: "Amey Rasekar (Pune Bureau)",
+    inventor: "Amey Rasekar (Pune, India)",
     claim:
       "I designed and trained a deep Convolutional Neural Network on MRI cross-sections to classify stages of cognitive degeneration with 90%+ empirical precision.",
     technicalMerit: "PyTorch • Python • Multi-Layer Convolutional Verification",
@@ -26,7 +26,7 @@ const PATENTS: PatentItem[] = [
     id: "query-engine",
     patentNo: "PATENT NO. 2005-GEO",
     title: "Sub-200ms Biodiversity Telemetry Ingestor",
-    inventor: "Amey Rasekar (Pune Bureau)",
+    inventor: "Amey Rasekar (Pune, India)",
     claim:
       "I engineered a high-throughput spatial querying apparatus capable of indexing multi-million row ecological datasets with negligible latency.",
     technicalMerit: "PostgreSQL • Spring Boot • Spatial GeoJSON Engine",
@@ -35,7 +35,7 @@ const PATENTS: PatentItem[] = [
     id: "p2p-ledger",
     patentNo: "PATENT NO. 2005-P2P",
     title: "Decentralized Peer-to-Peer Energy Trading Ledger",
-    inventor: "Amey Rasekar (Pune Bureau)",
+    inventor: "Amey Rasekar (Pune, India)",
     claim:
       "I built an automated smart-contract prototype allowing residential nodes to directly barter surplus solar electricity across a peer-to-peer wire.",
     technicalMerit: "TypeScript • Decentralized Consensus • Zero-Intermediary",
@@ -44,7 +44,7 @@ const PATENTS: PatentItem[] = [
     id: "fullstack-arch",
     patentNo: "PATENT NO. 2005-ARCH",
     title: "Type-Safe Full-Stack Newspaper Interface Apparatus",
-    inventor: "Amey Rasekar (Pune Bureau)",
+    inventor: "Amey Rasekar (Pune, India)",
     claim:
       "I architected this responsive, highly accessible broadsheet web application with sub-second asset hydration and WCAG-compliant high-contrast print.",
     technicalMerit: "Next.js 15 App Router • Tailwind CSS v4 • Type-Safe TS",

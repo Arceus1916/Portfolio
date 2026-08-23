@@ -151,7 +151,7 @@ export default function VictorianGitHubScreen({ projects }: VictorianGitHubScree
         </div>
         <div className="mt-2 text-[10px] font-mono uppercase text-paper-cream/60 flex justify-between">
           <span>● CONTINUOUS MECHANICAL RECORDING</span>
-          <span>● UPDATED BY PUNE BUREAU TELEGRAPH</span>
+          <span>● UPDATED FROM PUNE, INDIA</span>
         </div>
       </div>
 
